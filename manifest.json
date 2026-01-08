@@ -5,7 +5,7 @@
     {
       "chipFamily": "ESP32-S3",
       "ota": {
-        "md5": "943b1faac7981b5582837aa8e74f7643",
+        "md5": "8c4a76eb93a79e82d42295d171466d93",
         "path": "https://raw.githubusercontent.com/massstab/sweetspotbob-remote-tft-firmware/main/firmware/firmware.bin",
         "summary": "Testing firmware Update over https"
       }
