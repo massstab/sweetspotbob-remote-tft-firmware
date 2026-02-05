@@ -12,6 +12,7 @@ echo "Aktiviere ESPHome Python-Umgebung..."
 source "$ESPHOME_DIR/venv/bin/activate"
 mkdir -p $FIRMWARE_DEST
 
+
 # Schleife über alle Projekte
 for x in "${PROJECTS[@]}"; do
     echo "==============================="
@@ -19,6 +20,9 @@ for x in "${PROJECTS[@]}"; do
     
     # Projekt-Datei
     YAML_FILE="$ESPHOME_DIR/esp32-s3-tft-$x.yaml"
+
+    # Eigene Ordner pro Gerät
+    mkdir -p $FIRMWARE_DEST/esp32-s3-tft-$x
     
     # Kompilieren mit ESPHome
     esphome --quiet compile "$YAML_FILE"
@@ -37,12 +41,12 @@ for x in "${PROJECTS[@]}"; do
     fi
     
     # Ziel-Datei in SynologyDrive kopieren
-    DEST_FILE="$FIRMWARE_DEST/firmware-tft-${x}.ota.bin"
+    DEST_FILE="$FIRMWARE_DEST/esp32-s3-tft-$x/firmware-tft-${x}.ota.bin"
     echo "Kopiere Firmware nach $DEST_FILE ..."
     cp "$FIRMWARE_FILE" "$DEST_FILE"
     
     # MD5 Checksumme berechnen
-    MD5_FILE="$FIRMWARE_DEST/firmware-tft-${x}.md5"
+    MD5_FILE="$FIRMWARE_DEST/esp32-s3-tft-$x/firmware-tft-${x}.md5"
     echo "Berechne MD5-Checksumme ..."
     md5sum "$DEST_FILE" > "$MD5_FILE"
     
