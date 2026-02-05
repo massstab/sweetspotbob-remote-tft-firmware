@@ -55,3 +55,18 @@ done
 
 echo "==============================="
 echo "Alle Projekte wurden kompiliert und Checksummen erstellt."
+
+# Git Commit und Push
+cd ~/SynologyDrive/Projekte/SweetSpotBob/sweetspotbob-remote-tft-firmware || exit 1
+
+echo "Füge neue Firmware-Dateien zum Git hinzu..."
+git add firmware/*
+
+# Commit mit automatischem Timestamp
+COMMIT_MSG="Update Firmware $(date +'%Y-%m-%d %H:%M:%S')"
+git commit -m "$COMMIT_MSG"
+
+echo "Pushe Änderungen zu GitHub..."
+git push origin main
+
+echo "Fertig! Alle Änderungen sind auf GitHub."
