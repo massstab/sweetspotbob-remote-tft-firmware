@@ -5,8 +5,8 @@
     {
       "chipFamily": "ESP32-S3",
       "ota": {
-        "md5": "https://raw.githubusercontent.com/massstab/sweetspotbob-remote-tft-firmware/refs/heads/main/firmware/esp32-s3-tft-1/firmware-esp32-s3-tft-1.md5",
-        "path": "https://github.com/massstab/sweetspotbob-remote-tft-firmware/raw/refs/heads/main/firmware/esp32-s3-tft-1/firmware-esp32-s3-tft-1.ota.bin"
+        "md5": "https://sweetspotbob-remote-tft-firmware.howiesfriend.ch/esp32-s3-tft-1/firmware-esp32-s3-tft-1.md5",
+        "path": "https://sweetspotbob-remote-tft-firmware.howiesfriend.ch/esp32-s3-tft-1/firmware-esp32-s3-tft-1.ota.bin"
       }
     }
   ]
