@@ -5,7 +5,7 @@
     {
       "chipFamily": "ESP32-S3",
       "ota": {
-        "md5": "bc36c59cb2be082163d04a3351af383f",
+        "md5": "c95fa7c7b30c3f87e25b891c0c89778c",
         "path": "https://sweetspotbob-remote-tft-firmware.howiesfriend.ch/esp32-s3-tft-2/firmware-esp32-s3-tft-2.ota.bin"
       }
     }
